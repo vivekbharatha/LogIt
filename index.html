@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="assets/css/RobotoFont.css">
+    <link rel="stylesheet" href="assets/css/app.css">
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -12,11 +14,17 @@
     <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.routes.js"></script>
+    <script src="app/components/post/PostService.js"></script>
+    <script src="app/components/post/PostController.js"></script>
 </head>
 <body ng-app="LogIt" layout="column">
-<md-toolbar layout="row">
+<!--layout Top-->
+<md-toolbar layout="row" class="toolbar">
     <h1>Log It</h1>
 </md-toolbar>
-    <ng-view></ng-view>
+<!--layout Center-->
+<ng-view flex layout="row">
+
+</ng-view>
 </body>
 </html>

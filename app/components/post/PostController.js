@@ -1,13 +1,34 @@
 /**
  * Created by v3xvard on 16/1/16.
  */
-LogIt.controller('PostController', ['$scope', 'PostService', '_state', function ($scope, PostService, _state) {
+LogIt.controller('PostController', ['$scope', 'PostService', '_state', '$location', function ($scope, PostService, _state, $location) {
+    $scope.reset = function () {
+        $scope.posts = [];
+        $scope.title = '';
+        $scope.content = '';
+    };
+    $scope.reset();
     if (_state.value === 'list') {
         PostService.getAllPosts().then(function success(response) {
-            console.log(response);
+            $scope.posts = response.data.results;
         },
-        function error(error) {
-            console.log(error);
+        function error(err) {
+            console.log(err);
         });
+    } else if (_state.value === 'newPost') {
+
+    }
+
+    $scope.newPost = function () {
+        if ($scope.title && $scope.content) {
+            PostService.createPost({title: $scope.title, content: $scope.content})
+                .then(function success(response) {
+                    console.log(response);
+                    $location.path('/posts');
+                },
+                function error(err) {
+                    console.log(err);
+                });
+        }
     }
 }]);

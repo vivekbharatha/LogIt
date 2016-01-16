@@ -2,7 +2,7 @@
  * Created by Vivek Bharatha on 16/1/16.
  */
 var LogIt = angular.module('LogIt', ['ngRoute', 'ngMaterial']);
-logIt.constant('appConfig', {
+LogIt.constant('appConfig', {
         apiUrl: 'https://api.parse.com/1/classes'
     })
     .run(['$http', function ($http) {
