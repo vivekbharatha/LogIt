@@ -1,0 +1,19 @@
+<md-sidenav md-is-locked-open="true" class="md-whiteframe-z2">
+    <md-list>
+        <md-list-item ng-repeat="post in posts" flex >
+            <md-button ng-click="selectPost(post)" ng-class="{'selected-item': post === selected}" class="list-item md-whiteframe-z1">
+                <div layout="row">
+                    <div flex="60"><h3>{{ post.title }}</h3></div>
+                    <div flex="40" class="date">{{ post.createdAt | amDateFormat:'Do MMM, YYYY'}}</div>
+                </div>
+            </md-button>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
+<md-content flex id="content" class="post-content">
+    <h2 class="post-title">{{ selected.title }}</h2>
+    <p>{{ selected.content }}</p>
+</md-content>
+<md-button class="md-fab md-primary add-post-button" aria-label="Add Post" ng-href="#add-post">
+    <md-icon md-svg-src="assets/icons/ic_add_white_24px.svg"></md-icon>
+</md-button>

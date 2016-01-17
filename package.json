@@ -1,0 +1,23 @@
+{
+  "name": "logit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekbharatha/LogIt.git"
+  },
+  "author": "Vivek Bharatha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivekbharatha/LogIt/issues"
+  },
+  "homepage": "https://github.com/vivekbharatha/LogIt#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}

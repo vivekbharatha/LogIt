@@ -1,0 +1,25 @@
+{
+  "name": "logit",
+  "authors": [
+    "Vivek Bharatha <vivek.bharatha@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-material": "~1.0.2",
+    "angular-route": "~1.4.8",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.11.1"
+  }
+}
