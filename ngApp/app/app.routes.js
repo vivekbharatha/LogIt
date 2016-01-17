@@ -2,7 +2,7 @@
  * Created by Vivek Bharatha on 16/1/16.
  */
 LogIt.config(function($routeProvider) {
-    $routeProvider.otherwise('/');
+    $routeProvider.otherwise('/posts');
     $routeProvider
         .when('/posts', {
             templateUrl: 'app/components/post/posts.html',
