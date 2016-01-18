@@ -13,3 +13,5 @@ server.use(morgan('dev'));
 server.listen(port, function() {
     console.log('Server running at port: ' + port);
 });
+
+module.exports = server;
